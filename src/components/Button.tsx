@@ -1,5 +1,13 @@
-type Props = React.PropsWithChildren<{ title: React.ReactNode }>;
+type Props = React.PropsWithChildren<
+  React.HTMLAttributes<HTMLButtonElement> & {
+    title: string;
+  }
+>;
 
-export const Button = ({ title, ...props }: Props) => {
-  return <button {...props}>{title}</button>;
+export const Button = ({ title, className, ...props }: Props) => {
+  return (
+    <button className={className} {...props}>
+      {title}
+    </button>
+  );
 };
