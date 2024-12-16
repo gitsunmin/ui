@@ -1,12 +1,14 @@
+import { cn } from '@/utils/classname';
+
 type Props = React.PropsWithChildren<
-  React.HTMLAttributes<HTMLButtonElement> & {
-    title: string;
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    title: React.ReactNode;
   }
 >;
 
-export const Button = ({ title, className, ...props }: Props) => {
+export const Button = ({ title, className = '', ...props }: Props) => {
   return (
-    <button className={className} {...props}>
+    <button className={cn(className)} {...props}>
       {title}
     </button>
   );
