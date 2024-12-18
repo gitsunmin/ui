@@ -1,0 +1,59 @@
+import { Meta, Typeset } from "@storybook/blocks";
+import { TypographyToken, typographyWeight } from '@/tokens/typography';
+
+
+<Meta title="components/Text" />
+ 
+export const typography = {
+  type: {
+    primary: '"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  },
+  weight: {
+    normal: '400',
+    bold: '700',
+  },
+};
+ 
+export const SampleText = '한글, English, 日本語, Español';
+ 
+# Typography
+ 
+ ## Heading - normal
+<Typeset
+  fontSizes={Object.entries(TypographyToken)
+      .filter(([key]) => key.includes('heading'))
+      .map(([, value]) => value)}
+  fontWeight={typographyWeight.normal}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+ ## Heading - bold
+<Typeset
+  fontSizes={Object.entries(TypographyToken)
+      .filter(([key]) => key.includes('heading'))
+      .map(([, value]) => value)}
+  fontWeight={typographyWeight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+ ## Body - normal
+<Typeset
+  fontSizes={Object.entries(TypographyToken)
+      .filter(([key]) => key.includes('body'))
+      .map(([, value]) => value)}
+  fontWeight={typographyWeight.normal}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+ ## Body - bold
+<Typeset
+  fontSizes={Object.entries(TypographyToken)
+      .filter(([key]) => key.includes('body'))
+      .map(([, value]) => value)}
+  fontWeight={typographyWeight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
