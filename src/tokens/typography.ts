@@ -15,7 +15,7 @@ export const typographyWeight = {
 export type TypographyTokenKey = `${TypographyVariant}-${TypographySize}`;
 
 export const TypographyToken: Record<TypographyTokenKey, string> = {
-    'heading-1': '3.00rem',
+    'heading-1': '3.000rem',
     'heading-2': '2.750rem',
     'heading-3': '2.500rem',
     'heading-4': '2.000rem',

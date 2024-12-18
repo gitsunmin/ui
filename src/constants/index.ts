@@ -1,0 +1,1 @@
+export const TYPOGRAPHY_SAMPLE_TEXT = '한글, English, 日本語, Español';

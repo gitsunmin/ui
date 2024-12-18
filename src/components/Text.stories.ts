@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Text } from '@/components/Text';
 import { typographySize, typographyVariant } from '@/tokens/typography';
+import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 
 const meta = {
   title: 'components/Text',
@@ -30,6 +31,6 @@ export const Index: Story = {
     variant: 'heading',
     size: 1,
     bold: false,
-    children: '한글, English, 日本語, Español',
+    children: TYPOGRAPHY_SAMPLE_TEXT,
   },
 };
