@@ -1,54 +1,48 @@
 import { Meta, Typeset } from "@storybook/blocks";
-import { TypographyToken, typographyWeight } from '@/tokens/typography';
+import { typography, typographyWeight, } from '@/tokens/typography';
 import {TYPOGRAPHY_SAMPLE_TEXT} from '@/constants';
 
 
 <Meta title="components/Text" />
  
-export const typography = {
-  type: {
-    primary: '"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  },
-};
- 
 # Text (Typography)
  
  ## Heading - normal
 <Typeset
-  fontSizes={Object.entries(TypographyToken)
+  fontSizes={Object.entries(typography)
       .filter(([key]) => key.includes('heading'))
       .map(([, value]) => value).reverse()}
   fontWeight={typographyWeight.normal}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-  fontFamily={typography.type.primary}
+  fontFamily={typography.primary}
 />
 
  ## Heading - bold
 <Typeset
-  fontSizes={Object.entries(TypographyToken)
+  fontSizes={Object.entries(typography)
       .filter(([key]) => key.includes('heading'))
       .map(([, value]) => value).reverse()}
   fontWeight={typographyWeight.bold}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-  fontFamily={typography.type.primary}
+  fontFamily={typography.primary}
 />
 
  ## Body - normal
 <Typeset
-  fontSizes={Object.entries(TypographyToken)
+  fontSizes={Object.entries(typography)
       .filter(([key]) => key.includes('body'))
       .map(([, value]) => value)}
   fontWeight={typographyWeight.normal}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-  fontFamily={typography.type.primary}
+  fontFamily={typography.primary}
 />
 
  ## Body - bold
 <Typeset
-  fontSizes={Object.entries(TypographyToken)
+  fontSizes={Object.entries(typography)
       .filter(([key]) => key.includes('body'))
       .map(([, value]) => value)}
   fontWeight={typographyWeight.bold}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-  fontFamily={typography.type.primary}
+  fontFamily={typography.primary}
 />
