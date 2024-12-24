@@ -1,0 +1,23 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { colors } from '@/tokens/color';
+
+<Meta title="Colors" />
+
+
+## Dart Mode
+
+<ColorPalette>
+  <ColorItem
+    title="theme.dark.primary"
+    colors={{ dart: colors.dark.primary, foreground: colors.dark.foreground.primary, background: colors.dark.background.primary }}
+  />
+</ColorPalette>
+
+## Light Mode
+
+<ColorPalette>
+  <ColorItem
+    title="theme.light.primary"
+    colors={{ dart: colors.light.primary, foreground: colors.light.foreground.primary, background: colors.light.background.primary }}
+  />
+</ColorPalette>
