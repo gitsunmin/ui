@@ -16,6 +16,7 @@ export type TypographyToken =
     | `body-${TypographyBodySize}`;
 
 export const typographyWeight = {
+    thin: '100',
     normal: '400',
     bold: '700',
 };

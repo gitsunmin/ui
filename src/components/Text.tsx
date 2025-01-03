@@ -5,14 +5,24 @@ type Props = React.PropsWithChildren<
   React.HTMLAttributes<HTMLSpanElement> & {
     token: TypographyToken;
     bold?: boolean;
+    bright?: boolean;
   }
 >;
 
-export const Text = ({ token, bold = false, children, ...others }: Props) => {
+export const Text = ({
+  token,
+  bold = false,
+  bright = false,
+  children,
+  ...others
+}: Props) => {
   const props = {
     className: cn(
       {
-        'font-bold': bold,
+        'light-text-shadow dark:dark-text-shadow': bright,
+      },
+      {
+        'font-bold': !bright && bold,
       },
       {
         'text-body-1': token === 'body-1',

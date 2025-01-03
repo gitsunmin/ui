@@ -26,6 +26,7 @@ export const Index: Story = {
   args: {
     token: 'heading-1',
     bold: false,
+    bright: false,
     children: TYPOGRAPHY_SAMPLE_TEXT,
   },
 };

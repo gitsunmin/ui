@@ -1,31 +1,66 @@
 
+type DefinedColor = `var(--${string}-color)`;
+
 type ColorTheme = {
-    primary: string;
+    primary: DefinedColor;
     foreground: {
-        primary: string;
+        primary: DefinedColor;
     }
     background: {
-        primary: string;
-    }
+        primary: DefinedColor;
+    },
+    border: {
+        primary: DefinedColor;
+    };
+    button: {
+        foreground: {
+            primary: DefinedColor;
+        };
+        background: {
+            primary: DefinedColor;
+        };
+    };
 };
 
 export const dark: ColorTheme = {
-    primary: 'hsl(30, 100%, 50%)',
+    primary: 'var(--dark-primary-color)',
     foreground: {
-        primary: 'hsl(30, 100%, 10%)',
+        primary: 'var(--dark-foreground-primary-color)',
     },
     background: {
-        primary: 'hsl(30, 100%, 100%)',
+        primary: 'var(--dark-background-primary-color)',
+    },
+    border: {
+        primary: 'var(--dark-border-primary-color)'
+    },
+    button: {
+        foreground: {
+            primary: `var(--dark-button-foreground-primary-color)`,
+        },
+        background: {
+            primary: `var(--dark-button-background-primary-color)`,
+        },
     },
 };
 
 export const light: ColorTheme = {
-    primary: 'hsl(240, 80%, 50%)',
+    primary: 'var(--light-primary-color)',
     foreground: {
-        primary: 'hsl(240, 100%, 10%)',
+        primary: 'var(--light-foreground-primary-color)',
     },
     background: {
-        primary: 'hsl(240, 100%, 100%)',
+        primary: 'var(--light-background-primary-color)',
+    },
+    border: {
+        primary: 'var(--light-border-primary-color)'
+    },
+    button: {
+        foreground: {
+            primary: `var(--light-button-foreground-primary-color)`,
+        },
+        background: {
+            primary: `var(--light-button-background-primary-color)`,
+        },
     },
 };
 
