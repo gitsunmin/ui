@@ -9,8 +9,8 @@
   --dark-primary-color: hsl(30, 100%, 50%);
   --light-primary-color: hsl(240, 80%, 50%);
 
-  --dark-foreground-primary-color: hsl(30, 100%, 10%);
-  --light-foreground-primary-color: hsl(240, 100%, 10%);
+  --dark-foreground-primary-color: hsl(0, 0%, 95%);
+  --light-foreground-primary-color: hsl(0, 0%, 0%);
 
   --dark-background-primary-color: hsl(30, 100%, 100%);
   --light-background-primary-color: hsl(240, 100%, 100%);
@@ -18,10 +18,10 @@
   --dark-border-primary-color: hsl(48, 17%, 8%);
   --light-border-primary-color: hsl(60, 14%, 34%);
 
-  --dark-button-foreground-primary-color: hsl(30, 100%, 0%);
+  --dark-button-foreground-primary-color: hsl(30, 100%, 50%);
   --light-button-foreground-primary-color: hsl(240, 80%, 50%);
 
-  --dark-button-background-primary-color: hsl(40, 100%, 50%);
+  --dark-button-background-primary-color: hsl(30, 50.9%, 5%);
   --light-button-background-primary-color: hsl(240, 100%, 100%);
 }
 

@@ -12,6 +12,10 @@ const meta = {
       options: Object.keys(typography),
       control: { type: 'select' },
     },
+    variant: {
+      options: ['normal', 'bold', 'bright'],
+      control: { type: 'select' },
+    },
   },
   parameters: {
     layout: 'centered',
@@ -25,8 +29,7 @@ type Story = StoryObj<typeof meta>;
 export const Index: Story = {
   args: {
     token: 'heading-1',
-    bold: false,
-    bright: false,
+    variant: 'normal',
     children: TYPOGRAPHY_SAMPLE_TEXT,
   },
 };

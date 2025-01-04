@@ -1,5 +1,4 @@
-
-type DefinedColor = `var(--${string}-color)`;
+type DefinedColor = `var(--dark-${string}-color)` | `var(--light-${string}-color)`;
 
 type ColorTheme = {
     primary: DefinedColor;

@@ -1,34 +1,33 @@
 import type { TypographyToken } from '@/tokens/typography';
 import { cn } from '@/utils/classname';
 
+type TextVariant = 'bold' | 'normal' | 'bright';
+
 type Props = React.PropsWithChildren<
   React.HTMLAttributes<HTMLSpanElement> & {
     token: TypographyToken;
-    bold?: boolean;
-    bright?: boolean;
+    variant?: TextVariant;
   }
 >;
 
 export const Text = ({
   token,
-  bold = false,
-  bright = false,
+  variant = 'normal',
   children,
   ...others
 }: Props) => {
   const props = {
     className: cn(
       {
-        'light-text-shadow dark:dark-text-shadow': bright,
-      },
-      {
-        'font-bold': !bright && bold,
+        'light-text-shadow dark:dark-text-shadow': variant === 'bright',
+        'font-bold': variant === 'bold',
       },
       {
         'text-body-1': token === 'body-1',
         'text-body-2': token === 'body-2',
         'text-body-3': token === 'body-3',
       },
+      'text-light-foreground-primary dark:text-dark-foreground-primary',
       others.className
     ),
     ...others,
@@ -46,5 +45,5 @@ export const Text = ({
     'body-3': <span {...props}>{children}</span>,
   };
 
-  return Components[token] ?? null;
+  return Components[token] ?? <span>{children}</span>;
 };
