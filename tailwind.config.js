@@ -10,6 +10,21 @@ export default {
       fontSize: typography,
       fontWeight: typographyWeight,
       colors,
+      animation: {
+        ripple: 'ripple 0.6s ease-out',
+      },
+      keyframes: {
+        ripple: {
+          '0%': {
+            transform: 'scale(0)',
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'scale(4)',
+            opacity: '0',
+          },
+        },
+      },
     },
   },
   plugins: [],

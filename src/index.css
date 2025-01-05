@@ -22,7 +22,7 @@
   --light-button-foreground-primary-color: hsl(240, 80%, 50%);
 
   --dark-button-background-primary-color: hsl(30, 50.9%, 5%);
-  --light-button-background-primary-color: hsl(240, 100%, 100%);
+  --light-button-background-primary-color: hsl(0, 0%, 100%);
 }
 
 @layer base {
