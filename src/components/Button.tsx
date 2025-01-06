@@ -9,7 +9,7 @@ type Props = React.PropsWithChildren<
   }
 >;
 
-export const Button = ({
+const Button = ({
   variant = 'primary',
   className = '',
   children,
@@ -67,3 +67,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;

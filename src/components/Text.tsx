@@ -10,12 +10,7 @@ type Props = React.PropsWithChildren<
   }
 >;
 
-export const Text = ({
-  token,
-  variant = 'normal',
-  children,
-  ...others
-}: Props) => {
+const Text = ({ token, variant = 'normal', children, ...others }: Props) => {
   const props = {
     className: cn(
       {
@@ -47,3 +42,5 @@ export const Text = ({
 
   return Components[token] ?? <span>{children}</span>;
 };
+
+export default Text;

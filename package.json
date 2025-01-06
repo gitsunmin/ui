@@ -1,15 +1,31 @@
 {
-  "name": "desun-system-react",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@gitsunmin/desun-system-react",
+  "version": "0.0.1-alpha.0",
   "type": "module",
+  "main": "dist/desun-system-react.es.js",
+  "module": "dist/desun-system-react.es.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/desun-system-react.es.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./css": "./dist/desun-system-react.css"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && bun run tailwind",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "publish": "npm publish --access public",
+    "tailwind": "npx tailwindcss -i ./src/index.css -o ./dist/desun-system-react.css"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -33,6 +49,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "ajv": "^8.17.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",

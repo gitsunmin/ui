@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Text } from '@/components/Text';
+import Text from '@/components/Text';
 import { typography } from '@/tokens/typography';
 import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 

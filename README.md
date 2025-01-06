@@ -6,6 +6,5 @@
 
 
 ## Components
-- [ ]  Text (Typography)
-- [ ]  Button
-- [ ]  Color
+- [x]  Text (Typography)
+- [x]  Button
