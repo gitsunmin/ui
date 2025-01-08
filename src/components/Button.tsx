@@ -39,10 +39,9 @@ const Button = ({
         className,
         'px-4 py-2 rounded overflow-hidden relative',
         'font-bold',
-        'light-text-shadow dark:dark-text-shadow',
         'outline outline-1',
         {
-          'bg-light-button-background-primary dark:bg-dark-button-background-primary text-light-button-foreground-primary dark:text-dark-button-foreground-primary':
+          'bg-light-button-background-primary dark:bg-dark-button-background-primary text-light-button-foreground-primary dark:text-dark-button-foreground-primary light-text-shadow dark:dark-text-shadow':
             variant === 'primary',
         }
       )}
@@ -53,7 +52,7 @@ const Button = ({
         <span
           key={index}
           className={cn(`absolute rounded-full opacity-50 animate-ripple`, {
-            'bg-light-button-foreground-primary dark:bg-dark-button-foreground-primary':
+            'bg-light-button-ripple-primary dark:bg-dark-button-ripple-primary':
               variant === 'primary',
           })}
           style={{

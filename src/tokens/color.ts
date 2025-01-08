@@ -17,6 +17,9 @@ type ColorTheme = {
         background: {
             primary: DefinedColor;
         };
+        ripple: {
+            primary: DefinedColor;
+        }
     };
 };
 
@@ -35,11 +38,14 @@ export const dark: ColorTheme = {
         background: {
             primary: FOUNDATION.color.white,
         },
+        ripple: {
+            primary: FOUNDATION.color.orange[300],
+        },
     },
 };
 
 export const light: ColorTheme = {
-    primary: FOUNDATION.color.blue[500],
+    primary: FOUNDATION.color.cyan[900],
     foreground: {
         primary: FOUNDATION.color.black,
     },
@@ -48,10 +54,13 @@ export const light: ColorTheme = {
     },
     button: {
         foreground: {
-            primary: FOUNDATION.color.blue[500],
+            primary: FOUNDATION.color.cyan[900],
         },
         background: {
             primary: FOUNDATION.color.white,
+        },
+        ripple: {
+            primary: FOUNDATION.color.cyan[300],
         },
     },
 };
