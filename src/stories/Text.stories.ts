@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Text from '@/components/Text';
-import { typography } from '@/tokens/typography';
 import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
+import { TOKEN } from '@/tokens';
 
 const meta = {
   title: 'components/Text',
   component: Text,
   argTypes: {
     token: {
-      options: Object.keys(typography),
+      options: Object.keys(TOKEN.typography.fontSize),
       control: { type: 'select' },
     },
     variant: {
