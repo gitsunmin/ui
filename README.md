@@ -1,9 +1,6 @@
-# Desun System React
+# @gitsunmin/UI
 
-`Desun System React` is a Design System for React.
-
-> Gitsunmin + Design System + React => Desun System React
-
+UI component library for gitsunmin's projects
 
 ## Components
 - [x]  Text (Typography)

@@ -1,5 +1,5 @@
-import { typography, typographyWeight } from './src/tokens/typography';
-import { colors } from './src/tokens/color';
+import { TOKEN } from './src/tokens';
+import { FOUNDATION } from './src/foundations';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,9 +7,12 @@ export default {
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
-      fontSize: typography,
-      fontWeight: typographyWeight,
-      colors,
+      fontSize: TOKEN.typography.fontSize,
+      fontWeight: TOKEN.typography.fontWeight,
+      colors: {
+        ...TOKEN.color,
+        ...FOUNDATION.color,
+      },
       animation: {
         ripple: 'ripple 0.6s ease-out',
       },
@@ -27,5 +30,40 @@ export default {
       },
     },
   },
-  plugins: [],
+
+  plugins: [
+    function ({ addUtilities, addComponents }) {
+      addUtilities({
+        '.dark-text-shadow': {
+          fontWeight: 100,
+          textShadow: `${TOKEN.color.dark.primary} 1px 0 10px`,
+        },
+        '.light-text-shadow': {
+          fontWeight: 100,
+          textShadow: `${TOKEN.color.light.primary} 1px 0 10px`,
+        },
+      });
+
+      addComponents({
+        h1: {
+          fontSize: TOKEN.typography.fontSize['heading-1'],
+        },
+        h2: {
+          fontSize: TOKEN.typography.fontSize['heading-2'],
+        },
+        h3: {
+          fontSize: TOKEN.typography.fontSize['heading-3'],
+        },
+        h4: {
+          fontSize: TOKEN.typography.fontSize['heading-4'],
+        },
+        h5: {
+          fontSize: TOKEN.typography.fontSize['heading-5'],
+        },
+        h6: {
+          fontSize: TOKEN.typography.fontSize['heading-6'],
+        },
+      });
+    },
+  ],
 };

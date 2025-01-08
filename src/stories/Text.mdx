@@ -9,20 +9,20 @@ import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
  
 ## Heading - normal
 <Typeset
-  fontSizes={Object.entries(typography)
+  fontSizes={Object.entries(typography.fontSize)
       .filter(([key]) => key.includes('heading'))
       .map(([, value]) => value).reverse()}
-  fontWeight={typographyWeight.normal}
+  fontWeight={typography.fontWeight.normal}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
   fontFamily={typography.primary}
 />
 
 ## Heading - bold
 <Typeset
-  fontSizes={Object.entries(typography)
+  fontSizes={Object.entries(typography.fontSize)
       .filter(([key]) => key.includes('heading'))
       .map(([, value]) => value).reverse()}
-  fontWeight={typographyWeight.bold}
+  fontWeight={typography.fontWeight.bold}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
   fontFamily={typography.primary}
 />
@@ -31,10 +31,10 @@ import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 ### light mode
 <div className='light-text-shadow'>
   <Typeset
-    fontSizes={Object.entries(typography)
+    fontSizes={Object.entries(typography.fontSize)
         .filter(([key]) => key.includes('heading'))
         .map(([, value]) => value).reverse()}
-    fontWeight={typographyWeight.thin}
+    fontWeight={typography.fontWeight.thin}
     sampleText={TYPOGRAPHY_SAMPLE_TEXT}
     fontFamily={typography.primary}
   />
@@ -42,10 +42,10 @@ import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 ### dark mode
 <div className='dark-text-shadow'>
   <Typeset
-    fontSizes={Object.entries(typography)
+    fontSizes={Object.entries(typography.fontSize)
         .filter(([key]) => key.includes('heading'))
         .map(([, value]) => value).reverse()}
-    fontWeight={typographyWeight.thin}
+    fontWeight={typography.fontWeight.thin}
     sampleText={TYPOGRAPHY_SAMPLE_TEXT}
     fontFamily={typography.primary}
   />
@@ -53,20 +53,20 @@ import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 
 ## Body - normal
 <Typeset
-  fontSizes={Object.entries(typography)
+  fontSizes={Object.entries(typography.fontSize)
       .filter(([key]) => key.includes('body'))
       .map(([, value]) => value)}
-  fontWeight={typographyWeight.normal}
+  fontWeight={typography.fontWeight.normal}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
   fontFamily={typography.primary}
 />
 
 ## Body - bold
 <Typeset
-  fontSizes={Object.entries(typography)
+  fontSizes={Object.entries(typography.fontSize)
       .filter(([key]) => key.includes('body'))
       .map(([, value]) => value)}
-  fontWeight={typographyWeight.bold}
+  fontWeight={typography.fontWeight.bold}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
   fontFamily={typography.primary}
 />
@@ -76,10 +76,10 @@ import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 ### light mode
 <div className='light-text-shadow'>
   <Typeset
-    fontSizes={Object.entries(typography)
+    fontSizes={Object.entries(typography.fontSize)
         .filter(([key]) => key.includes('body'))
         .map(([, value]) => value)}
-    fontWeight={typographyWeight.thin}
+    fontWeight={typography.fontWeight.thin}
     sampleText={TYPOGRAPHY_SAMPLE_TEXT}
     fontFamily={typography.primary}
   />
@@ -87,10 +87,10 @@ import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 ### dark mode
 <div className='dark-text-shadow'>
   <Typeset
-    fontSizes={Object.entries(typography)
+    fontSizes={Object.entries(typography.fontSize)
         .filter(([key]) => key.includes('body'))
         .map(([, value]) => value)}
-    fontWeight={typographyWeight.thin}
+    fontWeight={typography.fontWeight.thin}
     sampleText={TYPOGRAPHY_SAMPLE_TEXT}
     fontFamily={typography.primary}
   />

@@ -1,4 +1,6 @@
-type DefinedColor = `var(--dark-${string}-color)` | `var(--light-${string}-color)`;
+import { FOUNDATION } from '@/foundations';
+
+type DefinedColor = `var(--dark-${string}-color)` | `var(--light-${string}-color)` | string;
 
 type ColorTheme = {
     primary: DefinedColor;
@@ -8,9 +10,6 @@ type ColorTheme = {
     background: {
         primary: DefinedColor;
     },
-    border: {
-        primary: DefinedColor;
-    };
     button: {
         foreground: {
             primary: DefinedColor;
@@ -22,48 +21,42 @@ type ColorTheme = {
 };
 
 export const dark: ColorTheme = {
-    primary: 'var(--dark-primary-color)',
+    primary: FOUNDATION.color.orange[500],
     foreground: {
-        primary: 'var(--dark-foreground-primary-color)',
+        primary: FOUNDATION.color.white,
     },
     background: {
-        primary: 'var(--dark-background-primary-color)',
-    },
-    border: {
-        primary: 'var(--dark-border-primary-color)'
+        primary: FOUNDATION.color.black,
     },
     button: {
         foreground: {
-            primary: `var(--dark-button-foreground-primary-color)`,
+            primary: FOUNDATION.color.orange[500],
         },
         background: {
-            primary: `var(--dark-button-background-primary-color)`,
+            primary: FOUNDATION.color.white,
         },
     },
 };
 
 export const light: ColorTheme = {
-    primary: 'var(--light-primary-color)',
+    primary: FOUNDATION.color.blue[500],
     foreground: {
-        primary: 'var(--light-foreground-primary-color)',
+        primary: FOUNDATION.color.black,
     },
     background: {
-        primary: 'var(--light-background-primary-color)',
-    },
-    border: {
-        primary: 'var(--light-border-primary-color)'
+        primary: FOUNDATION.color.white,
     },
     button: {
         foreground: {
-            primary: `var(--light-button-foreground-primary-color)`,
+            primary: FOUNDATION.color.blue[500],
         },
         background: {
-            primary: `var(--light-button-background-primary-color)`,
+            primary: FOUNDATION.color.white,
         },
     },
 };
 
-export const colors = {
+export const color = {
     dark,
     light,
 };

@@ -9,15 +9,19 @@ export default defineConfig({
     outDir: 'dist/types',
     entryRoot: 'src',
     staticImport: true,
+    exclude: ['**/*.stories.tsx', '**/*.mdx', 'src/constants/**/*', 'src/stories/**/*'],
   })],
   build: {
+
     lib: {
       entry: './src/index.ts',
-      name: 'DesunSystemReact',
-      fileName: (format) => `desun-system-react.${format}.js`,
+      name: '@gitsunmin/ui',
+      fileName: (format) => `index.${format}.js`,
       formats: ['es'],
+      cssFileName: 'index',
     },
     rollupOptions: {
+      treeshake: true,
       external: ['react', 'react-dom'],
       output: {
         dir: 'dist',
@@ -27,6 +31,7 @@ export default defineConfig({
         },
       },
     },
+    minify: true,
     copyPublicDir: false,
   },
   resolve: {

@@ -38,9 +38,9 @@ const Button = ({
       className={cn(
         className,
         'px-4 py-2 rounded overflow-hidden relative',
-        'light-border dark:dark-border',
         'font-bold',
         'light-text-shadow dark:dark-text-shadow',
+        'outline outline-1',
         {
           'bg-light-button-background-primary dark:bg-dark-button-background-primary text-light-button-foreground-primary dark:text-dark-button-foreground-primary':
             variant === 'primary',
