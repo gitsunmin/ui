@@ -45,7 +45,7 @@ export const dark: ColorTheme = {
 };
 
 export const light: ColorTheme = {
-    primary: FOUNDATION.color.cyan[900],
+    primary: FOUNDATION.color.teal[900],
     foreground: {
         primary: FOUNDATION.color.black,
     },
@@ -54,13 +54,13 @@ export const light: ColorTheme = {
     },
     button: {
         foreground: {
-            primary: FOUNDATION.color.cyan[900],
+            primary: FOUNDATION.color.teal[900],
         },
         background: {
             primary: FOUNDATION.color.white,
         },
         ripple: {
-            primary: FOUNDATION.color.cyan[300],
+            primary: FOUNDATION.color.teal[300],
         },
     },
 };
