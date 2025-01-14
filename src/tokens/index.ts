@@ -1,5 +1,5 @@
-import { typography } from '@/tokens/typography';
-import { color } from '@/tokens/color';
+import { typography } from './typography';
+import { color } from './color';
 
 export const TOKEN = {
     typography,

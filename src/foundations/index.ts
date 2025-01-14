@@ -1,4 +1,4 @@
-import { color } from '@/foundations/color';
+import { color } from './color';
 
 export const FOUNDATION = {
     color

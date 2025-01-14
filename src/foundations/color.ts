@@ -1,8 +1,14 @@
-import { hsl } from '@/utils/hsl';
+type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N
+    ? Acc[number]
+    : Enumerate<N, [...Acc, Acc['length']]>
+
+export type IntRange<F extends number, T extends number> = Exclude<Enumerate<T>, Enumerate<F>>
+
+export const hsl = (hue: IntRange<0, 361>, saturation: IntRange<0, 101>, lightness: IntRange<0, 101>) => `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
 /**
  * Reference: https://hypejunction.github.io/color-wizard/
  */
-
 
 export const color = {
     orange: {
@@ -43,5 +49,4 @@ export const color = {
     },
     white: hsl(0, 0, 100),
     black: hsl(0, 0, 0),
-
 };

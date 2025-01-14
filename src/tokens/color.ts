@@ -1,6 +1,6 @@
-import { FOUNDATION } from '@/foundations';
+import { FOUNDATION } from './../foundations';
 
-type DefinedColor = `var(--dark-${string}-color)` | `var(--light-${string}-color)` | string;
+type DefinedColor = string;
 
 type ColorTheme = {
     primary: DefinedColor;
