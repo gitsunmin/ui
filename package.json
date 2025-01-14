@@ -18,10 +18,8 @@
     "./css": "./dist/index.css"
   },
   "scripts": {
-    "dev": "vite",
     "build": "tsc -b && vite build && bun run tailwind",
     "lint": "eslint .",
-    "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "sb": "bun storybook",
     "build-storybook": "storybook build",
