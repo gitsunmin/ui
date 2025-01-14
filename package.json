@@ -23,6 +23,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
+    "sb": "bun storybook",
     "build-storybook": "storybook build",
     "publish": "npm publish --access public",
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./dist/index.css --minify"

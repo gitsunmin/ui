@@ -12,7 +12,6 @@ export default defineConfig({
     exclude: ['**/*.stories.tsx', '**/*.mdx', 'src/constants/**/*', 'src/stories/**/*'],
   })],
   build: {
-
     lib: {
       entry: './src/index.ts',
       name: '@gitsunmin/ui',

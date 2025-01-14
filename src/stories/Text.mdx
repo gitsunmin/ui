@@ -1,74 +1,74 @@
 import { Meta, Typeset } from "@storybook/blocks";
-import { typography, typographyWeight, } from '@/tokens/typography';
+import { TOKEN } from '@/tokens';
 import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 
 
-<Meta title="components/Text" />
+<Meta title="Typography" />
  
 # Text (Typography)
  
 ## Heading - normal
 <Typeset
-  fontSizes={Object.entries(typography.fontSize)
+  fontSizes={Object.entries(TOKEN.typography.fontSize)
       .filter(([key]) => key.includes('heading'))
       .map(([, value]) => value).reverse()}
-  fontWeight={typography.fontWeight.normal}
+  fontWeight={TOKEN.typography.fontWeight.normal}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-  fontFamily={typography.primary}
+  fontFamily={TOKEN.typography.primary}
 />
 
 ## Heading - bold
 <Typeset
-  fontSizes={Object.entries(typography.fontSize)
+  fontSizes={Object.entries(TOKEN.typography.fontSize)
       .filter(([key]) => key.includes('heading'))
       .map(([, value]) => value).reverse()}
-  fontWeight={typography.fontWeight.bold}
+  fontWeight={TOKEN.typography.fontWeight.bold}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-  fontFamily={typography.primary}
+  fontFamily={TOKEN.typography.primary}
 />
 
 ## Heading - bright (light mode)
 ### light mode
 <div className='light-text-shadow'>
   <Typeset
-    fontSizes={Object.entries(typography.fontSize)
+    fontSizes={Object.entries(TOKEN.typography.fontSize)
         .filter(([key]) => key.includes('heading'))
         .map(([, value]) => value).reverse()}
-    fontWeight={typography.fontWeight.thin}
+    fontWeight={TOKEN.typography.fontWeight.thin}
     sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-    fontFamily={typography.primary}
+    fontFamily={TOKEN.typography.primary}
   />
 </div>
 ### dark mode
 <div className='dark-text-shadow'>
   <Typeset
-    fontSizes={Object.entries(typography.fontSize)
+    fontSizes={Object.entries(TOKEN.typography.fontSize)
         .filter(([key]) => key.includes('heading'))
         .map(([, value]) => value).reverse()}
-    fontWeight={typography.fontWeight.thin}
+    fontWeight={TOKEN.typography.fontWeight.thin}
     sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-    fontFamily={typography.primary}
+    fontFamily={TOKEN.typography.primary}
   />
 </div>
 
 ## Body - normal
 <Typeset
-  fontSizes={Object.entries(typography.fontSize)
+  fontSizes={Object.entries(TOKEN.typography.fontSize)
       .filter(([key]) => key.includes('body'))
       .map(([, value]) => value)}
-  fontWeight={typography.fontWeight.normal}
+  fontWeight={TOKEN.typography.fontWeight.normal}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-  fontFamily={typography.primary}
+  fontFamily={TOKEN.typography.primary}
 />
 
 ## Body - bold
 <Typeset
-  fontSizes={Object.entries(typography.fontSize)
+  fontSizes={Object.entries(TOKEN.typography.fontSize)
       .filter(([key]) => key.includes('body'))
       .map(([, value]) => value)}
-  fontWeight={typography.fontWeight.bold}
+  fontWeight={TOKEN.typography.fontWeight.bold}
   sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-  fontFamily={typography.primary}
+  fontFamily={TOKEN.typography.primary}
 />
 
 
@@ -76,22 +76,22 @@ import { TYPOGRAPHY_SAMPLE_TEXT } from '@/constants';
 ### light mode
 <div className='light-text-shadow'>
   <Typeset
-    fontSizes={Object.entries(typography.fontSize)
+    fontSizes={Object.entries(TOKEN.typography.fontSize)
         .filter(([key]) => key.includes('body'))
         .map(([, value]) => value)}
-    fontWeight={typography.fontWeight.thin}
+    fontWeight={TOKEN.typography.fontWeight.thin}
     sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-    fontFamily={typography.primary}
+    fontFamily={TOKEN.typography.primary}
   />
 </div>
 ### dark mode
 <div className='dark-text-shadow'>
   <Typeset
-    fontSizes={Object.entries(typography.fontSize)
+    fontSizes={Object.entries(TOKEN.typography.fontSize)
         .filter(([key]) => key.includes('body'))
         .map(([, value]) => value)}
-    fontWeight={typography.fontWeight.thin}
+    fontWeight={TOKEN.typography.fontWeight.thin}
     sampleText={TYPOGRAPHY_SAMPLE_TEXT}
-    fontFamily={typography.primary}
+    fontFamily={TOKEN.typography.primary}
   />
 </div>
