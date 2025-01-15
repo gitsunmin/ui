@@ -13,7 +13,7 @@ export default defineConfig({
   })],
   build: {
     lib: {
-      entry: './src/index.ts',
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: '@gitsunmin/ui',
       fileName: (format) => `index.${format}.js`,
       formats: ['es'],
