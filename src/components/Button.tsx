@@ -3,11 +3,10 @@ import { useRef, useState } from 'react';
 
 type Variant = 'primary' | 'secondary';
 
-type Props = React.PropsWithChildren<
-  React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: Variant;
-  }
->;
+type Props = React.PropsWithChildren<{
+  variant: Variant;
+  className?: string;
+}>;
 
 const Button = ({
   variant = 'primary',
