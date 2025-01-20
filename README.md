@@ -6,5 +6,5 @@ UI component library for gitsunmin's projects
 - [x]  Text (Typography)
 - [x]  Button
 - [ ]  Spinner
-- [ ]  Header
+- [x]  Header
 - [ ]  Avatar
